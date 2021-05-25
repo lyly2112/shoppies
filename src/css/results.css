@@ -1,0 +1,8 @@
+.results-container {
+    display: flex;
+
+}
+.results-container__query {
+    display: flex;
+    font-weight: 600;
+}
