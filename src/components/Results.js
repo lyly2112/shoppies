@@ -1,5 +1,6 @@
 import React from "react";
-import Result from "./Result"
+import Result from "./Result";
+import "../css/results.css";
 
 function Results({movies}) {
     return (
