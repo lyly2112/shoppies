@@ -1,8 +1,21 @@
 .results-container {
-    display: flex;
-
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
 }
-.results-container__query {
+
+.results-container__title {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.results-container__list {
     display: flex;
-    font-weight: 600;
+    flex-direction: column;
+}
+
+.results-container__query {
+  display: flex;
+  font-weight: 600;
 }

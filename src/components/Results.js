@@ -2,22 +2,21 @@ import React from "react";
 import Result from "./Result";
 import "../css/results.css";
 
-function Results({movies}) {
-    return (
-        <>
-        <div>
-        {
-            movies && movies.map(movie => {
-                // {console.log("value.Title =>>>", movie.Title);}
-                return (
-                    <Result movie={movie} />
-                )
-            })
-        }
-        </div>
-        {/* <pre>{JSON.stringify({ movies }, undefined, 2)}</pre> */}
-        </>
-    )
+function Results({ movies }) {
+  return (
+    <div className="results-container">
+      <div className="results-container__title">
+        Results for <span className="results-container__query"></span>
+      </div>
+      <div className="results-container__list">
+        {movies &&
+          movies.map((movie) => {
+            // {console.log("value.Title =>>>", movie.Title);}
+            return <Result movie={movie} />;
+          })}
+      </div>
+    </div>
+  );
 }
 
 export default Results;

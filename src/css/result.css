@@ -1,4 +1,43 @@
 .result-container {
-    display: flex;
-    margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 0;
+  height: 12rem;
+}
+
+.result-container_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.result-container__title {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.result-container__year {
+  font-size: 1.5rem;
+}
+
+.result-container_image {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-container_poster {
+  display: flex;
+  width: 10rem;
+  height: 10rem;
+}
+
+.result-container_nominate-icon {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
 }

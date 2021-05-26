@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Results from "./Results";
 import "../css/search.css";
+import "../css/results.css";
 
 function Search() {
   const [movies, setMovies] = useState({});
@@ -46,9 +47,9 @@ function Search() {
         />
       </label>
       <button onClick={() => getMoviesData()}>Test</button>
-      <div className="results-container">
+      {/*<div className="results-container">
         Results for <span className="results-container__query">"{query}"</span>
-      </div>
+  </div>*/}
       <Results movies={movies.Search}/>
       {/* <pre>{JSON.stringify({ movies }, undefined, 2)}</pre> */}
     </div>
