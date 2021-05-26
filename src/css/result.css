@@ -1,9 +1,8 @@
 .result-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 1rem 0;
-  height: 12rem;
 }
 
 .result-container_text {
@@ -28,16 +27,22 @@
 .result-container_image {
   display: flex;
   flex-direction: column;
+  width: 5rem;
+  margin-right: 1rem;
 }
 
 .result-container_poster {
   display: flex;
-  width: 10rem;
-  height: 10rem;
 }
 
 .result-container_nominate-icon {
   display: flex;
-  width: 2rem;
-  height: 2rem;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-style: solid;
+  border-color: #dbdae3;
+  border-width: 1px;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
 }
