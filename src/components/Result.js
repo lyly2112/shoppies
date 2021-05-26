@@ -11,11 +11,13 @@ function Result({ movie }) {
           className="result-container_poster"
           alt="Poster"
         />
-        <img
-          src={heart}
-          className="result-container_nominate-icon"
-          alt="Nominate"
-        />
+        <button className="result-container_nominate-button">
+          <img
+            src={heart}
+            className="result-container_nominate-icon"
+            alt="Nominate"
+          />
+        </button>
       </div>
       <div className="result-container_text">
         <span className="result-container__title">{movie.Title}</span>

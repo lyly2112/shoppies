@@ -1,7 +1,6 @@
 .results-container {
   display: flex;
   flex-direction: column;
-  max-width: 90%;
 }
 
 .results-container__title {

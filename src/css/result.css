@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
+  padding-left: 0.5rem;
 }
 
 .result-container__title {
@@ -27,22 +28,28 @@
 .result-container_image {
   display: flex;
   flex-direction: column;
-  width: 5rem;
-  margin-right: 1rem;
 }
 
 .result-container_poster {
   display: flex;
+  height: 10rem;
+  width: 7rem;
+  object-fit: cover;
 }
 
 .result-container_nominate-icon {
   display: flex;
   padding: 1rem;
-  margin: 0.5rem 0;
   border-style: solid;
   border-color: #dbdae3;
   border-width: 1px;
   border-radius: 50%;
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.result-container_nominate-button {
+  display: flex;
+  border-style: none;
+  background: none;
 }
