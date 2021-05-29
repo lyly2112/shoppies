@@ -47,9 +47,6 @@ function Search() {
         />
       </label>
       <button onClick={() => getMoviesData()}>Test</button>
-      {/*<div className='results-container'>
-        Results for <span className='results-container__query'>'{query}'</span>
-  </div>*/}
       <Results movies={movies.Search} query={ query } />
       {/* <pre>{JSON.stringify({ movies }, undefined, 2)}</pre> */}
     </div>
