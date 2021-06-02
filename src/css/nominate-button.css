@@ -1,16 +1,17 @@
-.nominate-icon {
-  display: flex;
-  padding: 1rem;
-  border-style: solid;
-  border-color: #dbdae3;
-  border-width: 1px;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
 .nominate-button {
   display: flex;
-  border-style: none;
+  border: none;
+  height: 2.5rem;
+  font-size: 2rem;
   background: none;
+  
 }
+
+
+.nominate-button:focus {
+color: red;
+
+
+}
+
+

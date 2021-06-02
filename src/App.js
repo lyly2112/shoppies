@@ -1,8 +1,11 @@
 // import logo from './logo.svg';
+import './css/font.css';
+
 import './App.css';
 import Search from './components/Search';
 import NominationList from './components/NominationList';
 import Nomination from './components/Nomination';
+
 
 // import axios from 'axios';
 // import { useState, useEffect } from 'react';
