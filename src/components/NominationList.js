@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Nomination from "./Nomination";
+import React, { useState } from 'react';
+import Nomination from './Nomination';
 
 
 function NominationList(counter) {

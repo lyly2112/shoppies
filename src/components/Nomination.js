@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import '../css/font.css';
-import "../css/nominate-button.css";
+import '../css/nominate-button.css';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Favorite from '@material-ui/icons/Favorite';
@@ -19,10 +19,10 @@ function Nomination(movie) {
   return (
     <>
       {/*<button
-        type="button"
-        className="nominate-button"
+        type='button'
+        className='nominate-button'
         onClick={increment}
-        value="counter"
+        value='counter'
       >
         	&#9829; &#9825; 
       </button>*/}
@@ -30,8 +30,8 @@ function Nomination(movie) {
       <FormControlLabel
         control={<Checkbox icon={<FavoriteBorder />} 
                   checkedIcon={<Favorite />}
-          name="checkedH" />}
-        label="Nominate"
+          name='checkedH' />}
+        label='Nominate'
       />
 
       </>
