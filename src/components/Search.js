@@ -6,14 +6,13 @@ import '../css/results.css';
 
 function Search() {
   const [movies, setMovies] = useState({});
-  const [query, setQuery] = useState();
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     console.log('useEffect movies ->', movies);
   }, [movies]);
 
   const getMoviesData = () => {
-    console.log('query ->', query);
     axios
       .get(
         `http://www.omdbapi.com/?s=${query}&type=movie&apikey=${process.env.REACT_APP_API_KEY}`

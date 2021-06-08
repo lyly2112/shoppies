@@ -1,5 +1,5 @@
 import React from 'react';
-import Nomination from './Nomination';
+import NominateButton from './NominateButton';
 import '../css/result.css';
 
 function Result({ movie }) {
@@ -18,7 +18,7 @@ function Result({ movie }) {
           <span className='result-container__year'>{movie.Year}</span>
         </div>
       </div>
-      <Nomination movie={movie}/>
+      <NominateButton />
     </div>
   );
 }
