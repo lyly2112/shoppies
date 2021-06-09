@@ -6,16 +6,23 @@ import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 import NominateButton from './NominateButton';
 
 
-function Nomination(movie) {
-  const [counter, setCounter] = useState(0);
-  const [nomination, setNomation] = useState();
-
-
-  return(
-{counter}
-{nomination}
-  )
-
+function Nomination({nomination}) {
+return(
+  <div className='result-container' key={movie.imdbID}>
+      <div className='result-container__movie'>
+        <div className='result-container_image'>
+          <img
+            src={movie.Poster}
+            className='result-container_poster'
+            alt='Poster'
+          />
+        </div>
+        <div className='result-container_text'>
+          <span className='result-container__title'>{movie.Title}</span>
+          <span className='result-container__year'>{movie.Year}</span>
+        </div>
+      </div></div>
+      )
 }
 
 export default Nomination;

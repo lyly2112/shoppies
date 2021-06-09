@@ -1,28 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Favorite from "@material-ui/icons/Favorite";
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
-import Result from './Result';
+import Result from "./Result";
+import { ListItemSecondaryAction, MuiThemeProvider } from "@material-ui/core";
 
 function NominateButton({ movie }) {
   const [count, setCount] = useState(0);
-  const [nomination, setNomination] = useState('');
+  //const [nomination, setNomination] = useState("")
+  const [nominations, setNominations] = useState([])
+
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
 
   const addNomination = (event) => {
     if (event.target.checked) {
-//       setNomination([
-//         ...nomination,
-//         {
-// title: movie
-//         }
-//       ])
+      //       setNomination([
+      //         ...nomination,
+      //         {
+      // title: movie
+      //         }
+      //       ])
       console.log("heart is checked!!!")
-      setCount(1)    
-      console.log(count)
-
+      setCount(1)
+      // setNominations(
+      //   [
+      //     ...nominations,
+      //     {
+      //       id: nominations.length,
+            
+      //     }
+      //   ]
+      // )
+      console.log(nominations)
     }
-  };
+  }
 
   return (
     <>
@@ -43,6 +57,7 @@ function NominateButton({ movie }) {
         }
         label="Nominate"
       />
+      
     </>
   );
 }
