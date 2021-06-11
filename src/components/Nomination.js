@@ -3,9 +3,9 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Favorite from "@material-ui/icons/Favorite";
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
-import NominateButton from "./NominateButton";
+import RemoveButton from "./RemoveButton";
 
-function Nomination({ nomination }) {
+function Nomination({ nomination, index }) {
   return (
     // <div className='result-container' key={movie.imdbID}>
     //     <div className='result-container__movie'>
@@ -22,7 +22,13 @@ function Nomination({ nomination }) {
     //       </div>
     //     </div></div>
 
-    <li className="movie">{nomination}</li>
+    <li>
+      <span>
+        {index + 1}
+        {nomination.title}
+        <RemoveButton />
+      </span>
+    </li>
   );
 }
 

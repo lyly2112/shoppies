@@ -3,7 +3,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Favorite from "@material-ui/icons/Favorite";
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
-import Result from "./Result";
+
 import { ListItemSecondaryAction, MuiThemeProvider } from "@material-ui/core";
 
 function NominateButton({ movie }) {
@@ -45,7 +45,7 @@ setNominations()
             onChange={addNomination}
           />
         }
-        label="Nominate"
+        //label="Nominate"
       />
     </>
   );
