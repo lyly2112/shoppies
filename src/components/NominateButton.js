@@ -8,36 +8,26 @@ import { ListItemSecondaryAction, MuiThemeProvider } from "@material-ui/core";
 
 function NominateButton({ movie }) {
   const [count, setCount] = useState(0);
-  //const [nomination, setNomination] = useState("")
   const [nominations, setNominations] = useState([])
 
   useEffect(() => {
     console.log(count);
   }, [count]);
 
+  useEffect(() => {
+setNominations()
+
+
+    console.log(nominations);
+  }, [nominations]);
+
   const addNomination = (event) => {
     if (event.target.checked) {
-      //       setNomination([
-      //         ...nomination,
-      //         {
-      // title: movie
-      //         }
-      //       ])
       console.log("heart is checked!!!")
       setCount(1)
-      // setNominations(
-      //   [
-      //     ...nominations,
-      //     {
-      //       id: nominations.length,
-            
-      //     }
-      //   ]
-      // )
-      console.log(nominations)
+      
     }
-  }
-
+  };
   return (
     <>
       <FormControlLabel
@@ -57,7 +47,6 @@ function NominateButton({ movie }) {
         }
         label="Nominate"
       />
-      
     </>
   );
 }

@@ -3,6 +3,7 @@ import './css/font.css';
 
 import './App.css';
 import Search from './components/Search';
+import NominationList from './components/NominationList';
 
 
 // import axios from 'axios';
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className='App'>
       <Search />
+      {/*<NominationList/>*/}
     </div>
   );
 }
