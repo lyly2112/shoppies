@@ -9,6 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "@material/button": "^11.0.0",
     "@react-md/autocomplete": "^2.8.3",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
