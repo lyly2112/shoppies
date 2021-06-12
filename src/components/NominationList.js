@@ -7,8 +7,8 @@ function NominationList(props) {
       {/* {nominations.map((nominations) => (
         <Nomination key={nominations.imdbID} {...nominations} />
       ))} */}
-      {props.nominations.map((nomination, index) => {
-        return <Nomination nomination={nomination}  index={index}/>;
+      {props.nominations.map((nominations, index) => {
+        return <Nomination nominations={nominations}  index={index}/>;
       })}
     </ul>
   );

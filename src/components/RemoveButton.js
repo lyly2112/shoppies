@@ -8,17 +8,11 @@ import { ListItemSecondaryAction, MuiThemeProvider } from "@material-ui/core";
 
 function RemoveButton() {
   const [count, setCount] = useState(1);
-  const [nominations, setNominations] = useState([]);
 
   useEffect(() => {
     console.log(count);
   }, [count]);
 
-  useEffect(() => {
-    setNominations();
-
-    console.log(nominations);
-  }, [nominations]);
 
   const removeNomination = (event) => {
     console.log("movie is removed!!!");
@@ -26,8 +20,7 @@ function RemoveButton() {
   };
   return (
     <>
-    <Button onClick={removeNomination}>{<Clear />} </Button>
-  
+      <Button onClick={removeNomination}>{<Clear />} </Button>
     </>
   );
 }

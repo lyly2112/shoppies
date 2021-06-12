@@ -18,7 +18,7 @@ function Result({ movie }) {
           <span className='result-container__year'>{movie.Year}</span>
         </div>
       </div>
-      <NominateButton />
+      <NominateButton  movie={movie} />
     </div>
   );
 }

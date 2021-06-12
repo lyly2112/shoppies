@@ -4,8 +4,10 @@ import Checkbox from "@material-ui/core/Checkbox";
 import Favorite from "@material-ui/icons/Favorite";
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 import RemoveButton from "./RemoveButton";
+import NominateButton from "./RemoveButton";
 
-function Nomination({ nomination, index }) {
+
+function Nomination({ nominations, index }) {
   return (
     // <div className='result-container' key={movie.imdbID}>
     //     <div className='result-container__movie'>
@@ -25,7 +27,7 @@ function Nomination({ nomination, index }) {
     <li>
       <span>
         {index + 1}
-        {nomination.title}
+        {nominations}
         <RemoveButton />
       </span>
     </li>

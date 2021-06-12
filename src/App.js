@@ -10,21 +10,21 @@ import NominationList from "./components/NominationList";
 import React, { useState } from "react";
 
 function App() {
-  const nominations = [
-    {
-      id: 1,
-      title: "title1"
-    },
-    {
-      id: 2,
-      title: "title2"
-    },
-  ];
+  // const nominations = [
+  //   {
+  //     id: 1,
+  //     title: "title1"
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "title2"
+  //   },
+  // ];
 
   return (
     <div className="App">
       <Search />
-      <NominationList nominations={nominations} />
+      {/* <NominationList  /> */}
     </div>
   );
 }
