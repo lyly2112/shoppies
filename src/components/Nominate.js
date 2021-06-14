@@ -30,14 +30,21 @@ function Nominate({ movie, nominations, setNominations }) {
       //   [event.target.movie]: event.target.checked,
       // });
 
-      setNominations({
-        ...nominations,
-        movie,
-      });
+      // setNominations({
+      //   ...movie,
+      //   ...nominations
+      // });
+
       // let nominations = []
       // console.log('here ----->>>', localStorage.getItem('nominations'));
       // nominations.push(movie)
       // localStorage.setItem('nominations', nominations);
+
+      let newArr = nominations
+      newArr.push(movie);
+      console.log("Nominate component -> newArr ", newArr);
+      setNominations(newArr);
+      console.log("Nominate component -> nominations after setNominations ", nominations);
 
       // <NominationList nominations={nominations} count={count}/>;
     }
