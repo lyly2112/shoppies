@@ -3,7 +3,7 @@ import Nominate from './Nominate';
 
 import '../css/result.css';
 
-function Result({ movie }) {
+function Result({ movie, nominations, setNominations }) {
   return (
     <div className='result-container' key={movie.imdbID}>
       <div className='result-container__movie'>
@@ -19,7 +19,7 @@ function Result({ movie }) {
           <span className='result-container__year'>{movie.Year}</span>
         </div>
       </div>
-      <Nominate movie={movie} />
+      <Nominate movie={movie} nominations={nominations} setNominations={setNominations} />
     </div>
   );
 }

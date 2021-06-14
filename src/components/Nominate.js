@@ -7,9 +7,9 @@ import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 // import Nomination from "./Nomination";
 // import { ListItemSecondaryAction, MuiThemeProvider } from "@material-ui/core";
 
-function Nominate({ movie }) {
+function Nominate({ movie, nominations, setNominations }) {
   const [count, setCount] = useState(0);
-  const [nominations, setNominations] = useState([]);
+  // const [nominations, setNominations] = useState([]);
 
   useEffect(() => {
     console.log(count);
@@ -20,18 +20,20 @@ function Nominate({ movie }) {
   // }, [nominations]);
 
   const handleChange = (event) => {
+    console.log("Nominate component -> event.target.checked: ", event.target.checked);
+    console.log("Nominate component -> movie", movie);
     if (event.target.checked) {
       console.log("heart is checked!!!");
       setCount(1);
-      setNominations({
-        ...movie,
-        [event.target.movie]: event.target.checked,
-      });
-
       // setNominations({
       //   ...movie,
-      //   nominations,
+      //   [event.target.movie]: event.target.checked,
       // });
+
+      setNominations({
+        ...nominations,
+        movie,
+      });
       // let nominations = []
       // console.log('here ----->>>', localStorage.getItem('nominations'));
       // nominations.push(movie)

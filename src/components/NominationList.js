@@ -4,11 +4,11 @@ import { useEffect } from 'react';
 import Nomination from "./Nomination";
 
 function NominationList({ nominations, count }) {
-  let nominationsFromLocalStorage = localStorage.getItem('nominations');
+  // let nominationsFromLocalStorage = localStorage.getItem('nominations');
 
   useEffect(() => {
-    console.log("nominations from localStorage: ", nominationsFromLocalStorage[0]);
-  }, [nominationsFromLocalStorage]);
+    console.log("nominations from localStorage: ", nominations);
+  }, [nominations]);
 
   return (
     // {props.nominations.map((nomination, count) => {

@@ -2,17 +2,17 @@
 import "./css/font.css";
 import "./App.css";
 import Search from "./components/Search";
-import NominationList from "./components/NominationList";
+// import NominationList from "./components/NominationList";
 import React from "react";
-import { useState } from 'react;'
+import { useState, useEffect } from 'react';
 
 function App() {
   const [nominations, setNominations] = useState([]);
 
   return (
     <div className="App">
-      <Search />
-      <NominationList />
+      <Search nominations={nominations} setNominations={setNominations} />
+      {/* <NominationList nominations={nominations} /> */}
     </div>
   );
 }

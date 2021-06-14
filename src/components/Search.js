@@ -4,7 +4,7 @@ import Results from './Results';
 import '../css/search.css';
 import '../css/results.css';
 
-function Search() {
+function Search({ nominations, setNominations }) {
   const [movies, setMovies] = useState({});
   const [query, setQuery] = useState('');
 
@@ -46,7 +46,12 @@ function Search() {
         />
       </label>
       <button onClick={() => getMoviesData()}>Test</button>
-      <Results movies={movies.Search} query={ query } />
+      <Results
+        movies={movies.Search}
+        query={query}
+        nominations={nominations}
+        setNominations={setNominations}
+      />
       {/* <pre>{JSON.stringify({ movies }, undefined, 2)}</pre> */}
     </div>
   );

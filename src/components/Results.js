@@ -2,7 +2,7 @@ import React from 'react';
 import Result from './Result';
 import '../css/results.css';
 
-function Results({ movies, query }) {
+function Results({ movies, query, nominations, setNominations }) {
   return (
     <div className='results-container'>
       <div className='results-container__title'>
@@ -12,7 +12,12 @@ function Results({ movies, query }) {
         {movies &&
           movies.map((movie) => {
             // {console.log('value.Title =>>>', movie.Title);}
-            return <Result key={movie.imdbID} movie={movie} />;
+            return <Result
+                    key={movie.imdbID}
+                    movie={movie}
+                    nominations={nominations}
+                    setNominations={setNominations}
+                  />;
           })}
       </div>
     </div>
