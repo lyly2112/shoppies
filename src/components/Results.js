@@ -12,7 +12,7 @@ function Results({ movies, query }) {
         {movies &&
           movies.map((movie) => {
             // {console.log('value.Title =>>>', movie.Title);}
-            return <Result movie={movie} />;
+            return <Result key={movie.imdbID} movie={movie} />;
           })}
       </div>
     </div>
