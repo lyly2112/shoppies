@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import Favorite from "@material-ui/icons/Favorite";
-import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
+import React from "react";
+// import { useState } from 'react';
+// import FormControlLabel from "@material-ui/core/FormControlLabel";
+// import Checkbox from "@material-ui/core/Checkbox";
+// import Favorite from "@material-ui/icons/Favorite";
+// import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 import RemoveButton from "./RemoveButton";
-import NominateButton from "./RemoveButton";
+// import Nominate from "./Nominate";
 
-
-function Nomination({ nominations, index }) {
-  return (
+function Nomination({ nomination, count }) {
+    return (
     // <div className='result-container' key={movie.imdbID}>
     //     <div className='result-container__movie'>
     //       <div className='result-container_image'>
@@ -26,8 +26,8 @@ function Nomination({ nominations, index }) {
 
     <li>
       <span>
-        {index + 1}
-        {nominations}
+        {count}
+        {nomination}
         <RemoveButton />
       </span>
     </li>
