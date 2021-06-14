@@ -7,6 +7,8 @@ import React from "react";
 // import { useState, useEffect } from 'react;'
 
 function App() {
+  const [nominations, setNominations] = useState([]);
+
   return (
     <div className="App">
       <Search />

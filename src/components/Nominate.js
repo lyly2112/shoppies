@@ -5,7 +5,6 @@ import Favorite from "@material-ui/icons/Favorite";
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 // import NominationList from "./NominationList";
 // import Nomination from "./Nomination";
-
 // import { ListItemSecondaryAction, MuiThemeProvider } from "@material-ui/core";
 
 function Nominate({ movie }) {
