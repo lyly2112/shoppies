@@ -4,7 +4,7 @@ import "./App.css";
 import Search from "./components/Search";
 import NominationList from "./components/NominationList";
 import React from "react";
-// import { useState, useEffect } from 'react;'
+import { useState } from 'react;'
 
 function App() {
   const [nominations, setNominations] = useState([]);
