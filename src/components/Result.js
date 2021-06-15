@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nominate from './Nominate';
 import '../css/result.css';
 
 function Result({ movie, nominations, setNominations }) {
+  useEffect(() => {
+    console.log("result comp logg>>", nominations)
+  }, [nominations])
+  
   return (
     <div className='result-container' key={movie.imdbID}>
       <div className='result-container__movie'>

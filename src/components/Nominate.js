@@ -15,9 +15,9 @@ function Nominate({ movie, nominations, setNominations }) {
     console.log(count);
   }, [count]);
 
-  // useEffect(() => {
-  //   console.log("nominations: ", movie);
-  // }, [nominations]);
+  useEffect(() => {
+    console.log("nominations>>>>>>: ", movie);
+  }, [nominations]);
 
   const handleChange = (event) => {
     console.log("Nominate component -> event.target.checked: ", event.target.checked);
@@ -43,7 +43,7 @@ function Nominate({ movie, nominations, setNominations }) {
       let newArr = nominations
       newArr.push(movie);
       console.log("Nominate component -> newArr ", newArr);
-      setNominations(newArr);
+      setNominations(prevState => [...prevState, newArr]);
       console.log("Nominate component -> nominations after setNominations ", nominations);
 
       // <NominationList nominations={nominations} count={count}/>;
@@ -51,8 +51,7 @@ function Nominate({ movie, nominations, setNominations }) {
   };
 
   return (
-    <>
-      <FormControlLabel
+    <FormControlLabel
         control={
           <Checkbox
             icon={<FavoriteBorder />}
@@ -69,7 +68,6 @@ function Nominate({ movie, nominations, setNominations }) {
         onChange={handleChange}
         //label="Nominate"
       />
-    </>
   );
 }
 

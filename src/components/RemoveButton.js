@@ -19,9 +19,7 @@ function RemoveButton() {
     setCount(0);
   };
   return (
-    <>
-      <Button onClick={removeNomination}>{<Clear />} </Button>
-    </>
+    <Button onClick={removeNomination}>{<Clear />} </Button>
   );
 }
 
