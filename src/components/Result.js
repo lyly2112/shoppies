@@ -1,6 +1,5 @@
 import React from 'react';
 import Nominate from './Nominate';
-
 import '../css/result.css';
 
 function Result({ movie, nominations, setNominations }) {
