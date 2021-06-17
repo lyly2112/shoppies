@@ -1,8 +1,8 @@
 import React from "react";
 // import { useState } from 'react';
-import { useEffect } from 'react';
+import { useEffect } from "react";
 // import Nomination from "./Nomination";
-import RemoveButton from './RemoveButton';
+import RemoveButton from "./RemoveButton";
 
 function NominationList({ nominations, count }) {
   // let nominationsFromLocalStorage = localStorage.getItem('nominations');
@@ -12,8 +12,8 @@ function NominationList({ nominations, count }) {
   }, [nominations]);
 
   const test = () => {
-    console.log(nominations)
-  }
+    console.log(nominations);
+  };
 
   return (
     // {props.nominations.map((nomination, count) => {
@@ -31,18 +31,25 @@ function NominationList({ nominations, count }) {
       <button onClick={() => test()}>Test</button>
       <div className="results-container__list">
         <ul>
-          { nominations &&
+          {nominations &&
             nominations.map((nomination) => (
               // {console.log('value.Title =>>>', movie.Title);}
               // return <Nomination nomination={nomination} count={count} />;
               <li>
                 <span>
-                  <span>test</span>
-                  <span>{nomination.imdbID}</span>
+                  {/* <span>test</span> */}
+                  {/* <span>{nomination.imdbID}</span> */}
+                  <span>{nomination.Title}</span>
+                  <span>{nomination.Year}</span>
+                  <img
+                    src={nomination.Poster}
+                    className="result-container_poster"
+                    alt="Poster"
+                  />
                   {/* {count} */}
                   {/* {nomination} */}
-                  <RemoveButton />
-                </span>
+                </span>{" "}
+                <RemoveButton />
               </li>
             ))}
         </ul>

@@ -10,7 +10,7 @@ function RemoveButton() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
-    console.log(count);
+    console.log('count is ', count);
   }, [count]);
 
 
