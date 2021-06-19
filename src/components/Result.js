@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Nominate from './Nominate';
 import '../css/result.css';
 
-function Result({ movie, nominations, setNominations }) {
+function Result({ movie, nominations, setNominations, count, setCount }) {
   useEffect(() => {
     console.log("result comp logg>>", nominations)
   }, [nominations])
@@ -22,7 +22,7 @@ function Result({ movie, nominations, setNominations }) {
           <span className='result-container__year'>{movie.Year}</span>
         </div>
       </div>
-      <Nominate movie={movie} nominations={nominations} setNominations={setNominations} />
+      <Nominate movie={movie} nominations={nominations} setNominations={setNominations} count={count} setCount={setCount}/>
     </div>
   );
 }

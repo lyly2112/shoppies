@@ -9,18 +9,19 @@ import RemoveButton from "./components/RemoveButton";
 
 function App() {
   const [nominations, setNominations] = useState([]);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     console.log("App component -> nominations: ", nominations);
   }, [nominations]);
 
   const test = () => {
-    console.log("Test: App component printing nominations ", nominations);
+    console.log("Test: App component printing nominations and count ", nominations , count);
   };
 
   return (
     <div className="App">
-      <Search nominations={nominations} setNominations={setNominations} />
+      <Search nominations={nominations} setNominations={setNominations} count={count} setCount={setCount} />
       {/* <NominationList nominations={nominations} /> */}
 
       <div>NOMINATIONS</div>
@@ -31,7 +32,8 @@ function App() {
             nominations.map((nomination) => (
               // {console.log('value.Title =>>>', movie.Title);}
               // return <Nomination nomination={nomination} count={count} />;
-              <li>
+              <li key={nomination.imdbID}
+              >
                 <span>
                   {/* <span>test</span> */}
                   {/* <span>{nomination.imdbID}</span> */}
