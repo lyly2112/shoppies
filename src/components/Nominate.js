@@ -7,68 +7,39 @@ import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 // import Nomination from "./Nomination";
 // import { ListItemSecondaryAction, MuiThemeProvider } from "@material-ui/core";
 
-function Nominate({ movie, nominations, setNominations, count, setCount }) {
-  // const [count, setCount] = useState(0);
-  // const [nominations, setNominations] = useState([]);
-
-  // useEffect(() => {
-  //   console.log(count);
-  // }, [count]);
-
-  // useEffect(() => {
-  //   console.log("nominations>>>>>>: ", movie);
-  // }, [nominations]);
-
+function Nominate({ movie, nominations, setNominations }) {
   const handleChange = (event) => {
-    console.log("Nominate component -> event.target.checked: ", event.target.checked);
     console.log("Nominate component -> movie", movie);
     if (event.target.checked) {
       console.log("heart is checked!!!");
-      // setNominations({
-      //   ...movie,
-      //   [event.target.movie]: event.target.checked,
-      // });
-
-      // setNominations({
-      //   ...movie,
-      //   ...nominations
-      // });
-
-      // let nominations = []
-      // console.log('here ----->>>', localStorage.getItem('nominations'));
-      // nominations.push(movie)
-      // localStorage.setItem('nominations', nominations);
-
-      let newArr = nominations
-      newArr.push(movie);
+      let newArr = nominations;
       console.log("Nominate component -> newArr ", newArr);
-      setNominations(prevState => [...prevState, newArr]);
-      console.log("Nominate component -> nominations after setNominations ", nominations);
-      console.log("Nominate length ", nominations.length);
-      setCount(count++);
-
-      // <NominationList nominations={nominations} count={count}/>;
+      setNominations((prevState) => [...prevState, movie]);
+      console.log(
+        "Nominate component -> nominations after setNominations ",
+        nominations
+      );
     }
   };
 
   return (
     <FormControlLabel
-        control={
-          <Checkbox
-            icon={<FavoriteBorder />}
-            checkedIcon={
-              <Favorite
-                style={{
-                  color: "#FF0000",
-                }}
-              />
-            }
-            //name="checkedH"
-          />
-        }
-        onChange={handleChange}
-        //label="Nominate"
-      />
+      control={
+        <Checkbox
+          icon={<FavoriteBorder />}
+          checkedIcon={
+            <Favorite
+              style={{
+                color: "#FF0000",
+              }}
+            />
+          }
+          //name="checkedH"
+        />
+      }
+      onChange={handleChange}
+      //label="Nominate"
+    />
   );
 }
 

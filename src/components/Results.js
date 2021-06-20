@@ -2,7 +2,7 @@ import React from 'react';
 import Result from './Result';
 import '../css/results.css';
 
-function Results({ movies, query, nominations, setNominations, count, setCount }) {
+function Results({ movies, query, nominations, setNominations }) {
   return (
     <div className='results-container'>
       <div className='results-container__title'>
@@ -17,7 +17,6 @@ function Results({ movies, query, nominations, setNominations, count, setCount }
                     movie={movie}
                     nominations={nominations}
                     setNominations={setNominations}
-                    count={count} setCount={setCount}
                   />;
           })}
       </div>

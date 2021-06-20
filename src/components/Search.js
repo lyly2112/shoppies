@@ -4,7 +4,7 @@ import Results from './Results';
 import '../css/search.css';
 import '../css/results.css';
 
-function Search({ nominations, setNominations, count, setCount }) {
+function Search({ nominations, setNominations }) {
   const [movies, setMovies] = useState({});
   const [query, setQuery] = useState('');
 
@@ -51,7 +51,6 @@ function Search({ nominations, setNominations, count, setCount }) {
         query={query}
         nominations={nominations}
         setNominations={setNominations}
-        count={count} setCount={setCount}
       />
       {/* <pre>{JSON.stringify({ movies }, undefined, 2)}</pre> */}
     </div>
