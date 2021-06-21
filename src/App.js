@@ -9,7 +9,6 @@ import RemoveButton from "./components/RemoveButton";
 
 function App() {
   const [nominations, setNominations] = useState([]);
-  const [count, setCount] = useState(0);
   const [list, setList] = useState(nominations);
 
   function handleRemove(imdbID) {
@@ -25,9 +24,8 @@ function App() {
 
   const test = () => {
     console.log(
-      "Test: App component printing nominations and count ",
+      "Test: App component printing nominations",
       nominations,
-      count
     );
   };
 
@@ -36,8 +34,6 @@ function App() {
       <Search
         nominations={nominations}
         setNominations={setNominations}
-        count={count}
-        setCount={setCount}
       />
       {/* <NominationList nominations={nominations} /> */}
 
@@ -49,7 +45,7 @@ function App() {
           {nominations &&
             nominations.map((nomination) => (
               // {console.log('value.Title =>>>', movie.Title);}
-              // return <Nomination nomination={nomination} count={count} />;
+              // return <Nomination nomination={nomination} />;
               <li key={nomination.imdbID}>
                 {/* <span>test</span> */}
                 {/* <span>{nomination.imdbID}</span> */}
@@ -60,7 +56,6 @@ function App() {
                   className="result-container_poster"
                   alt="Poster"
                 />
-                {/* {count} */}
                 {/* {nomination} */}
                 <button
                   type="button"

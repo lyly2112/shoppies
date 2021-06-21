@@ -7,7 +7,6 @@ import Clear from "@material-ui/icons/Clear";
 // import { ListItemSecondaryAction, MuiThemeProvider } from "@material-ui/core";
 
 function RemoveButton() {
-  const [count, setCount] = useState(1);
   const removeNomination = (event) => {
     console.log("movie is removed!!!");
   };
