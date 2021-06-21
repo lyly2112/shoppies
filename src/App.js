@@ -5,7 +5,7 @@ import "./css/font.css";
 import "./App.css";
 import Search from "./components/Search";
 // import NominationList from "./components/NominationList";
-import RemoveButton from "./components/RemoveButton";
+// import RemoveButton from "./components/RemoveButton";
 
 function App() {
   const [nominations, setNominations] = useState([]);
@@ -14,32 +14,25 @@ function App() {
   function handleRemove(imdbID) {
     //remove nomination
     console.log("nomination.imdbID is ", imdbID);
-    const newList = list.filter((nomination) => imdbID !== imdbID);
-    setList(newList);
-    console.log("nominations new list is  ", nominations);
+    console.log("nominations  list is  ", list);
+
+    // const newList = list.filter((nomination) => nomination.imdbID !== imdbID);
+    // setList(newList);
+    console.log("nominations new list is  ", list);
   }
   useEffect(() => {
     console.log("App component -> nominations: ", nominations);
   }, [nominations]);
 
   const test = () => {
-    console.log(
-      "Test: App component printing nominations",
-      nominations,
-    );
+    console.log("Test: App component printing nominations", nominations);
   };
 
   return (
     <div className="App">
-      <Search
-        nominations={nominations}
-        setNominations={setNominations}
-      />
-      {/* <NominationList nominations={nominations} /> */}
-
+      <Search nominations={nominations} setNominations={setNominations} />
       <div>NOMINATIONS</div>
       <button onClick={() => test()}>Test</button>
-      
       <div className="results-container__list">
         <ul>
           {nominations &&
@@ -56,7 +49,6 @@ function App() {
                   className="result-container_poster"
                   alt="Poster"
                 />
-                {/* {nomination} */}
                 <button
                   type="button"
                   onClick={() => handleRemove(nomination.imdbID)}

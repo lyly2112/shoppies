@@ -8,6 +8,7 @@ import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 // import { ListItemSecondaryAction, MuiThemeProvider } from "@material-ui/core";
 
 function Nominate({ movie, nominations, setNominations }) {
+  
   const handleChange = (event) => {
     console.log("Nominate component -> movie", movie);
     if (event.target.checked) {
@@ -17,6 +18,25 @@ function Nominate({ movie, nominations, setNominations }) {
       setNominations((prevState) => [...prevState, movie]);
       console.log(
         "Nominate component -> nominations after setNominations ",
+        nominations
+      );
+    } else if (!event.target.checked) {
+      console.log("heart is UNchecked!!!");
+      {
+        let array = [...nominations]; // make a separate copy of the array
+        console.log('array',array)
+        let index = array.indexOf(movie);
+        console.log('event.target.value',movie)
+
+        console.log('index',index)
+        if (index !== -1) {
+          array.splice(index, 1);
+          setNominations( array );
+        }
+      }
+
+      console.log(
+        "Nominate component -> nominations after UNCKECK setNominations ",
         nominations
       );
     }
