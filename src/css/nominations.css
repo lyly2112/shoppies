@@ -1,0 +1,4 @@
+.nominations-conainer__header {
+  display: flex;
+  flex-direction: column;
+}
