@@ -4,7 +4,7 @@ import Results from './Results';
 import '../css/search.css';
 import '../css/results.css';
 
-function Search({ nominations, setNominations }) {
+function Search({ nominations, setNominations}) {
   const [movies, setMovies] = useState({});
   const [query, setQuery] = useState('');
 
