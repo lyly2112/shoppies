@@ -2,3 +2,10 @@
   display: flex;
   flex-direction: column;
 }
+
+.nominations-container__item{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
