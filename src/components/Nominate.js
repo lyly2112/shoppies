@@ -12,14 +12,12 @@ function Nominate({ movie, nominations, setNominations }) {
       // let newArr = nominations;
       setNominations((prevState) => [...prevState, movie]);
     } else if (!event.target.checked) {
-      {
-        let array = [...nominations]; // make a separate copy of the array
-        console.log("array", array);
-        let index = array.indexOf(movie);
-        if (index !== -1) {
-          array.splice(index, 1);
-          setNominations(array);
-        }
+      let array = [...nominations]; // make a separate copy of the array
+      console.log("array", array);
+      let index = array.indexOf(movie);
+      if (index !== -1) {
+        array.splice(index, 1);
+        setNominations(array);
       }
     }
   };

@@ -3,7 +3,7 @@ import { useState } from "react";
 // import { useEffect } from "react";
 // import logo from './logo.svg';
 import "./css/font.css";
-import "./App.css";
+import "./scss/main.css";
 import "./css/remove-nomination-button.css";
 
 import Search from "./components/Search";
@@ -14,16 +14,15 @@ import Clear from "@material-ui/icons/Clear";
 
 function App() {
   const [nominations, setNominations] = useState([]);
+  // const [checked, setChecked] = useState(false);
 
   function handleRemove(nomination) {
     //remove nomination
-    {
-      let array = [...nominations]; // make a separate copy of the array
-      let index = array.indexOf(nomination);
-      if (index !== -1) {
-        array.splice(index, 1);
-        setNominations(array);
-      }
+    let array = [...nominations]; // make a separate copy of the array
+    let index = array.indexOf(nomination);
+    if (index !== -1) {
+      array.splice(index, 1);
+      setNominations(array);
     }
   }
 
