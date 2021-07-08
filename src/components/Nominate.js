@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+// import { useState, useEffect } from "react";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Favorite from "@material-ui/icons/Favorite";

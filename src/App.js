@@ -1,13 +1,13 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+// import { useEffect } from "react";
 // import logo from './logo.svg';
 import "./css/font.css";
 import "./App.css";
 import "./css/remove-nomination-button.css";
 
 import Search from "./components/Search";
-import Nominate from "./components/Nominate";
-
+// import Nominate from "./components/Nominate";
 // import NominationList from "./components/NominationList";
 // import RemoveButton from "./components/RemoveButton";
 import Clear from "@material-ui/icons/Clear";
