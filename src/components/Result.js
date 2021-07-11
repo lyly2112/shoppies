@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import Nominate from "./Nominate";
 import "../css/result.css";
 
-function Result({ movie, nominations, setNominations }) {
+function Result({ movie, nominatedIMDBIds, setNominations }) {
   useEffect(() => {
-    console.log("result comp logg>>", nominations);
-  }, [nominations]);
+    console.log("result comp logg>>", nominatedIMDBIds);
+  }, [nominatedIMDBIds]);
 
   return (
     <div className="result-container" key={movie.imdbID}>
@@ -24,7 +24,7 @@ function Result({ movie, nominations, setNominations }) {
       </div>
       <Nominate
         movie={movie}
-        nominations={nominations}
+        nominatedIMDBIds={nominatedIMDBIds}
         setNominations={setNominations}
       />
     </div>

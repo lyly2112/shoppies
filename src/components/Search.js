@@ -4,7 +4,7 @@ import Results from './Results';
 import '../css/search.css';
 import '../css/results.css';
 
-function Search({ nominations, setNominations}) {
+function Search({ nominatedIMDBIds, setNominations}) {
   const [movies, setMovies] = useState({});
   const [query, setQuery] = useState('');
 
@@ -49,7 +49,7 @@ function Search({ nominations, setNominations}) {
       <Results
         movies={movies.Search}
         query={query}
-        nominations={nominations}
+        nominatedIMDBIds={nominatedIMDBIds}
         setNominations={setNominations}
       />
       {/* <pre>{JSON.stringify({ movies }, undefined, 2)}</pre> */}

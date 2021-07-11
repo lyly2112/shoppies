@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import { useState } from "react";
 // import { useEffect } from "react";
 // import logo from './logo.svg';
@@ -14,6 +14,10 @@ import Clear from "@material-ui/icons/Clear";
 
 function App() {
   const [nominations, setNominations] = useState([]);
+  // const [nominatedIMDBIds, setNominatedIMDBIds] = useState(new Set());
+  const nominatedIMDBIds = useMemo(() => new Set(nominations), [nominations]);
+
+
   // const [checked, setChecked] = useState(false);
 
   function handleRemove(nomination) {
@@ -28,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <Search nominations={nominations} setNominations={setNominations} />
+      <Search nominatedIMDBIds={nominatedIMDBIds} setNominations={setNominations} />
       <div className="results-container__title">Nominations</div>
       {/* <button onClick={() => test()}>Test</button> */}
       <div className="results-container__list">
