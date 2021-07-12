@@ -2,7 +2,7 @@ import React from 'react';
 import Result from './Result';
 import '../css/results.css';
 
-function Results({ movies, query, nominatedIMDBIds, setNominations }) {
+function Results({ movies, query, nominations, setNominations }) {
   return (
     <div className='results-container'>
       <div className='results-container__title'>
@@ -15,7 +15,7 @@ function Results({ movies, query, nominatedIMDBIds, setNominations }) {
             return <Result
                     key={movie.imdbID}
                     movie={movie}
-                    nominatedIMDBIds={nominatedIMDBIds}
+                    nominations={nominations}
                     setNominations={setNominations}
                   />;
           })}
