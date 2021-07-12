@@ -5,7 +5,6 @@ import { useState } from "react";
 import "./css/font.css";
 import "./scss/main.css";
 
-
 import Search from "./components/Search";
 // import Nominate from "./components/Nominate";
 // import NominationList from "./components/NominationList";
@@ -29,10 +28,9 @@ function App() {
   return (
     <div className="App">
       <Search nominations={nominations} setNominations={setNominations} />
-      <div className="results-container__title">Nominations</div>
-      {/* <button onClick={() => test()}>Test</button> */}
-      <div className="results-container__list">
-        <ul className="nominations-container__item">
+      <div className="nominations-container">
+        <div className="nominations-container__header">Nominations</div>
+        <ul className="nominations-container__list">
           {nominations &&
             nominations.map((nomination) => (
               <li className="result-container" key={nomination.imdbID}>

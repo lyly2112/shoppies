@@ -1,11 +1,22 @@
-.nominations-conainer__header {
+.nominations-container {
   display: flex;
   flex-direction: column;
-}
-
-.nominations-container__item{
-  display: flex;
   margin: 0;
   padding: 0;
   border: 0;
+
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
 }

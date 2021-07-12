@@ -178,7 +178,7 @@
   color: red;
 }
 
-.nominations-conainer__header {
+.nominations-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,15 +186,33 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.nominations-container__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+.nominations-container__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.nominations-container__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .remove-nomination-button {
