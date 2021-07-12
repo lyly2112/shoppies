@@ -3,14 +3,14 @@
   flex-direction: column;
   justify-content: flex-start;
   margin: 1rem 0;
-}
 
-.result-container__movie {
+
+&__movie {
   display: flex;
   flex-direction: row;
 }
 
-.result-container_text {
+&_text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -18,7 +18,7 @@
   padding-left: 0.5rem;
 }
 
-.result-container__title {
+&__title {
   display: flex;
   justify-content: flex-start;
   text-align: left;
@@ -26,19 +26,20 @@
   font-weight: 600;
 }
 
-.result-container__year {
+&__year {
   font-size: 1.5rem;
 }
 
-.result-container_image {
+&_image {
   display: flex;
   flex-direction: column;
 }
 
-.result-container_poster {
+&_poster {
   display: flex;
   height: 10rem;
   width: 7rem;
   object-fit: cover;
   background-color: black;
+}
 }

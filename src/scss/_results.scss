@@ -1,0 +1,22 @@
+.results-container {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__query {
+    display: flex;
+    font-weight: 600;
+  }
+}

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Results from './Results';
-import '../css/search.css';
-import '../css/results.css';
+
 
 function Search({ nominations, setNominations}) {
   const [movies, setMovies] = useState({});
@@ -40,7 +39,7 @@ function Search({ nominations, setNominations}) {
           type='text'
           name='query'
           value={query}
-          id='search-container__search-input'
+          className='search-container__search-input'
           placeholder='Search OMDB'
           onChange={(e) => handleChange(e)}
         />

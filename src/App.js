@@ -4,7 +4,7 @@ import { useState } from "react";
 // import logo from './logo.svg';
 import "./css/font.css";
 import "./scss/main.css";
-import "./css/remove-nomination-button.css";
+
 
 import Search from "./components/Search";
 // import Nominate from "./components/Nominate";
@@ -48,9 +48,9 @@ function App() {
                     />
                   </div>
                   <div className="result-container_text">
-                    <span className="result-container__title">
+                    <h2 className="result-container__title">
                       {nomination.Title}
-                    </span>
+                    </h2>
                     <span className="result-container__year">
                       {nomination.Year}
                     </span>

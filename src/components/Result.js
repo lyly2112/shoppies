@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Nominate from "./Nominate";
-import "../css/result.css";
+
 
 function Result({ movie, nominations, setNominations }) {
   useEffect(() => {
