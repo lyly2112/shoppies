@@ -7,6 +7,7 @@ function Search({ nominations, setNominations}) {
   const [movies, setMovies] = useState({});
   const [query, setQuery] = useState('');
 
+
   useEffect(() => {
     console.log('useEffect query ->', query);
   }, [query]);
@@ -15,41 +16,32 @@ function Search({ nominations, setNominations}) {
     console.log('useEffect movies ->', movies);
   }, [movies]);
 
-  useEffect(() => {
-    const delayDebounceFn = setTimeout(() => {
-      console.log('setQuery', query)
-      // Send Axios request here
-    }, 2000)
-    return () => clearTimeout(delayDebounceFn)
-  }, [query])
 
-
-  const getMoviesData = () => {
+  const getMoviesData = (locQuery) => {
     axios
       .get(
-        `http://www.omdbapi.com/?s=${query}&type=movie&apikey=${process.env.REACT_APP_API_KEY}`
+        `http://www.omdbapi.com/?s=${locQuery}&type=movie&apikey=${process.env.REACT_APP_API_KEY}`
       )
       .then((res) => {
         console.log('res.data ->', res.data);
         setMovies(res.data);
       })
-      .catch((err) => {
+      .catch((err) => {query
         console.log(err);
       });
   };
 
   
-  const handleChange = (e) => {
+  const handleChange = async (e) => {
     // e.preventDefault();
-    console.log('e.target.value -> ', e.target.value);
     //setQuery(e.target.value);
     setQuery(e.target.value);
-    console.log('query -> ', query);
-    getMoviesData();
+    console.log('======== e.target.value -> ', e.target.value);
+    getMoviesData(e.target.value);
   };
 
   //here is weard solution
-  //getMoviesData(handleChange);
+  // getMoviesData(handleChange);
 
   return (
     <div className='search-container'>
