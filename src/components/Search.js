@@ -8,8 +8,21 @@ function Search({ nominations, setNominations}) {
   const [query, setQuery] = useState('');
 
   useEffect(() => {
+    console.log('useEffect query ->', query);
+  }, [query]);
+
+  useEffect(() => {
     console.log('useEffect movies ->', movies);
   }, [movies]);
+
+  useEffect(() => {
+    const delayDebounceFn = setTimeout(() => {
+      console.log('setQuery', query)
+      // Send Axios request here
+    }, 2000)
+    return () => clearTimeout(delayDebounceFn)
+  }, [query])
+
 
   const getMoviesData = () => {
     axios
@@ -25,9 +38,13 @@ function Search({ nominations, setNominations}) {
       });
   };
 
+  
   const handleChange = (e) => {
+    // e.preventDefault();
     console.log('e.target.value -> ', e.target.value);
+    //setQuery(e.target.value);
     setQuery(e.target.value);
+    console.log('query -> ', query);
     getMoviesData();
   };
 
@@ -41,10 +58,10 @@ function Search({ nominations, setNominations}) {
           value={query}
           className='search-container__search-input'
           placeholder='Search OMDB'
-          onChange={(e) => handleChange(e)}
+          onChange={e => handleChange(e)}
         />
       </label>
-      <button onClick={() => getMoviesData()}>Test</button>
+      {/* <button onClick={() => getMoviesData()}>Test</button> */}
       <Results
         movies={movies.Search}
         query={query}
