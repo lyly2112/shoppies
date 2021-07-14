@@ -48,6 +48,9 @@ function Search({ nominations, setNominations}) {
     getMoviesData();
   };
 
+  //here is weard solution
+  //getMoviesData(handleChange);
+
   return (
     <div className='search-container'>
       <h2 className='search-container__header'>The Shoppies</h2>
