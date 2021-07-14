@@ -26,7 +26,7 @@ function Search({ nominations, setNominations}) {
         console.log('res.data ->', res.data);
         setMovies(res.data);
       })
-      .catch((err) => {query
+      .catch((err) => {
         console.log(err);
       });
   };
