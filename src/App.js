@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 // import { useEffect } from "react";
 // import logo from './logo.svg';
-import "./css/font.css";
 import "./scss/main.css";
+
 
 import Search from "./components/Search";
 // import Nominate from "./components/Nominate";
@@ -31,7 +31,6 @@ function App() {
 {nominations.length>0 &&
 <h2 className="nominations-container__header">Nominations</h2>}
       <div className="nominations-container">
-        {/* <div className="nominations-container__header">Nominations</div> */}
         <ul className="nominations-container__list">
           {nominations &&
             nominations.map((nomination) => (

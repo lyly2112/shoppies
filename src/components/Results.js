@@ -5,9 +5,9 @@ import Result from './Result';
 function Results({ movies, query, nominations, setNominations }) {
   return (
     <div className='results-container'>
-      <div className='results-container__title'>
+      {/* <div className='results-container__title'>
         Results for&nbsp;<span className='results-container__query'>{query}</span>
-      </div>
+      </div> */}
       <div className='results-container__list'>
         {movies &&
           movies.map((movie) => {
