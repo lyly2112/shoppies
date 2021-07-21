@@ -61,8 +61,6 @@ function App() {
                 >
                   {<Clear />}
                 </button>
-                {/* <Nominate /> */}
-                {/* <RemoveButton /> */}
               </li>
             ))}
         </ul>
