@@ -28,8 +28,14 @@ function App() {
   return (
     <div className="App">
       <Search nominations={nominations} setNominations={setNominations} />
+      
+      {nominations.length <=0 &&
+      <h2>
+        You have {nominations.length} nominations. You can nominate up to 5 movies!</h2>}
+{nominations.length>0 &&
+<h2>You have {nominations.length} nominations. You can nominate up to 5 movies!</h2>}
       <div className="nominations-container">
-        <div className="nominations-container__header">Nominations</div>
+        {/* <div className="nominations-container__header">Nominations</div> */}
         <ul className="nominations-container__list">
           {nominations &&
             nominations.map((nomination) => (
