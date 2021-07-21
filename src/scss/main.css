@@ -1,5 +1,6 @@
 body {
   font-family: "QanelasSoftUltraLight";
+  color: #525252;
 }
 
 .result-container {
@@ -142,6 +143,7 @@ body {
   font-family: "QanelasSoftExtraBold";
   font-size: 2rem;
   font-weight: 600;
+  color: #363636;
 }
 
 .search-container__search-label {
@@ -203,6 +205,9 @@ body {
   font-family: "QanelasSoftExtraBold";
   font-size: 2rem;
   font-weight: 600;
+  border-top: solid 2px;
+  border-color: #888888;
+  color: #363636;
 }
 
 .nominations-container__list {

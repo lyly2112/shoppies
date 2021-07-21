@@ -4,7 +4,6 @@ import { useState } from "react";
 // import logo from './logo.svg';
 import "./scss/main.css";
 
-
 import Search from "./components/Search";
 // import Nominate from "./components/Nominate";
 // import NominationList from "./components/NominationList";
@@ -28,9 +27,12 @@ function App() {
   return (
     <div className="App">
       <Search nominations={nominations} setNominations={setNominations} />
-{nominations.length>0 &&
-<h2 className="nominations-container__header">Nominations</h2>}
+
       <div className="nominations-container">
+        {nominations.length > 0 && (
+          <h2 className="nominations-container__header">Nominations</h2>
+        )}
+
         <ul className="nominations-container__list">
           {nominations &&
             nominations.map((nomination) => (
